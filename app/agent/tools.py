@@ -1,34 +1,36 @@
 import json
 import logging
 from typing import Dict, Any, List
-from app.config import settings
 from app.knowledge.catalog import catalog_service
 from app.knowledge.policies import policy_service
 from app.knowledge.orders import order_service
 
 logger = logging.getLogger(__name__)
 
-# Tool schemas definitions for LLM Tool Calling
 TOOLS_DEFINITIONS: List[Dict[str, Any]] = [
     {
         "type": "function",
         "function": {
             "name": "search_products",
-            "description": "Busca instrumentos, equipamentos e acessórios no catálogo da loja por termo de busca, categoria ou preço máximo.",
+            "description": "Busca instrumentos musicais no catálogo da loja por termo de pesquisa (ex: 'violão', 'tagima', 'yamaha', 'teclado', 'baixo'), categoria (ex: 'Violões', 'Guitarras', 'Baixos', 'Teclados e Pianos', 'Baterias e Percussão', 'Instrumentos de Sopro (Madeiras)', 'Instrumentos de Sopro (Metais)', 'Cordas Orquestrais', 'Ukuleles') ou preço máximo.",
             "parameters": {
                 "type": "object",
                 "properties": {
                     "query": {
                         "type": "string",
-                        "description": "Termo de busca, por exemplo: 'violão', 'stratocaster', 'encordoamento', 'teclado yamaha', 'takamine'."
+                        "description": "Termo de busca textual."
                     },
                     "category": {
                         "type": "string",
-                        "description": "Categoria específica: 'Cordas', 'Amplificadores', 'Teclas', 'Percussão', 'Acessórios'."
+                        "description": "Nome da categoria."
                     },
                     "max_price": {
                         "type": "number",
-                        "description": "Preço máximo desejado em Reais (R$)."
+                        "description": "Preço máximo em reais."
+                    },
+                    "in_stock_only": {
+                        "type": "boolean",
+                        "description": "Filtra apenas produtos com estoque disponível."
                     }
                 },
                 "required": []
@@ -39,16 +41,16 @@ TOOLS_DEFINITIONS: List[Dict[str, Any]] = [
         "type": "function",
         "function": {
             "name": "get_product_details",
-            "description": "Obtém detalhes completos de um produto específico através do seu código de identificação (ex: PROD-001).",
+            "description": "Consulta ficha técnica completa, preço de tabela, preço com desconto no PIX (5%), estoque e promoções de um instrumento específico pelo nome ou ID.",
             "parameters": {
                 "type": "object",
                 "properties": {
-                    "product_id": {
+                    "identifier": {
                         "type": "string",
-                        "description": "Código do produto (ex: PROD-001, PROD-002)."
+                        "description": "Nome do instrumento ou código de identificação (ex: 'Takamine GD20', 'Yamaha C40', '81')."
                     }
                 },
-                "required": ["product_id"]
+                "required": ["identifier"]
             }
         }
     },
@@ -56,16 +58,16 @@ TOOLS_DEFINITIONS: List[Dict[str, Any]] = [
         "type": "function",
         "function": {
             "name": "track_order",
-            "description": "Consulta o status, código de rastreamento e previsão de entrega de um pedido feito pelo cliente.",
+            "description": "Rastreia o pedido de um cliente através do número do pedido (ex: '1', 'PED-1', 'PED-1002') ou pelo código de rastreamento (ex: 'BRCX9876543BR').",
             "parameters": {
                 "type": "object",
                 "properties": {
-                    "order_id": {
+                    "identifier": {
                         "type": "string",
-                        "description": "Código do pedido fornecido pelo cliente (ex: PED-1001, PED-1002)."
+                        "description": "Número do pedido ou código de rastreio."
                     }
                 },
-                "required": ["order_id"]
+                "required": ["identifier"]
             }
         }
     },
@@ -73,21 +75,23 @@ TOOLS_DEFINITIONS: List[Dict[str, Any]] = [
         "type": "function",
         "function": {
             "name": "get_store_policy",
-            "description": "Consulta informações e políticas da loja sobre tópicos específicos (horários, endereço, formas de pagamento, frete, trocas, garantia, lutheria).",
+            "description": "Consulta seções específicas do manual de políticas e procedimentos do Empório da Música (horários, endereço, formas de pagamento, parcelamento, frete, trocas, devoluções, garantia, restrição de acessórios, LGPD).",
             "parameters": {
                 "type": "object",
                 "properties": {
                     "topic": {
                         "type": "string",
                         "enum": [
-                            "physical_store",
-                            "payment_methods",
-                            "shipping_and_delivery",
-                            "exchange_and_return_policy",
-                            "luthier_services",
-                            "human_attendant_support"
+                            "sobre_a_empresa",
+                            "horario_funcionamento",
+                            "formas_pagamento",
+                            "trocas_e_devolucoes",
+                            "frete_e_entregas",
+                            "promocoes_e_descontos",
+                            "garantia",
+                            "diretrizes_atendimento_whatsapp"
                         ],
-                        "description": "Tópico sobre o qual deseja detalhes da política."
+                        "description": "Seção do manual de políticas desejada."
                     }
                 },
                 "required": ["topic"]
@@ -98,13 +102,13 @@ TOOLS_DEFINITIONS: List[Dict[str, Any]] = [
         "type": "function",
         "function": {
             "name": "escalate_to_human",
-            "description": "Registra uma solicitação de atendimento com um atendente humano e retorna o número direto de suporte.",
+            "description": "Aciona o protocolo de transbordo para atendimento humano da equipe em Campo Grande/MS.",
             "parameters": {
                 "type": "object",
                 "properties": {
                     "reason": {
                         "type": "string",
-                        "description": "Motivo pelo qual o cliente precisa do atendente humano (ex: negociação especial, reclamação, dúvida técnica complexa)."
+                        "description": "Motivo do encaminhamento."
                     }
                 },
                 "required": ["reason"]
@@ -114,7 +118,6 @@ TOOLS_DEFINITIONS: List[Dict[str, Any]] = [
 ]
 
 def execute_tool(name: str, args: Dict[str, Any]) -> str:
-    """Dispatches tool execution and returns a JSON serialized string."""
     try:
         logger.info(f"Executing tool {name} with arguments: {args}")
 
@@ -122,29 +125,45 @@ def execute_tool(name: str, args: Dict[str, Any]) -> str:
             query = args.get("query")
             category = args.get("category")
             max_price = args.get("max_price")
-            results = catalog_service.search(query=query, category=category, max_price=max_price)
+            in_stock_only = args.get("in_stock_only", True)
+
+            results = catalog_service.search_products(
+                query=query,
+                category=category,
+                max_price=max_price,
+                in_stock_only=in_stock_only
+            )
+
             if not results:
                 return json.dumps({
                     "status": "not_found",
-                    "message": "Nenhum produto em estoque encontrado com os filtros informados.",
-                    "available_categories": catalog_service.list_categories()
+                    "message": "Nenhum instrumento em estoque encontrado com os critérios informados.",
+                    "categories_available": [c["name"] for c in catalog_service.list_categories()]
                 }, ensure_ascii=False)
-            return json.dumps({"status": "success", "count": len(results), "products": results}, ensure_ascii=False)
+
+            return json.dumps({
+                "status": "success",
+                "total_found": len(results),
+                "products": results
+            }, ensure_ascii=False)
 
         elif name == "get_product_details":
-            product_id = args.get("product_id", "")
-            product = catalog_service.get_by_id(product_id)
+            identifier = args.get("identifier") or args.get("product_id") or ""
+            product = catalog_service.get_product_details(str(identifier))
             if not product:
-                return json.dumps({"status": "not_found", "message": f"Produto {product_id} não encontrado."}, ensure_ascii=False)
+                return json.dumps({
+                    "status": "not_found",
+                    "message": f"Instrumento '{identifier}' não encontrado no catálogo."
+                }, ensure_ascii=False)
             return json.dumps({"status": "success", "product": product}, ensure_ascii=False)
 
         elif name == "track_order":
-            order_id = args.get("order_id", "")
-            order = order_service.get_by_id(order_id)
+            identifier = args.get("identifier") or args.get("order_id") or ""
+            order = order_service.track_order(str(identifier))
             if not order:
                 return json.dumps({
                     "status": "not_found",
-                    "message": f"Pedido {order_id} não localizado. Por favor, confirme o número do pedido."
+                    "message": f"Pedido ou código de rastreamento '{identifier}' não localizado no sistema."
                 }, ensure_ascii=False)
             return json.dumps({"status": "success", "order": order}, ensure_ascii=False)
 
@@ -154,7 +173,7 @@ def execute_tool(name: str, args: Dict[str, Any]) -> str:
             if not policy_data:
                 return json.dumps({
                     "status": "not_found",
-                    "message": f"Tópico {topic} não encontrado nas políticas."
+                    "message": f"Tópico '{topic}' não encontrado nas políticas."
                 }, ensure_ascii=False)
             return json.dumps({"status": "success", "topic": topic, "policy": policy_data}, ensure_ascii=False)
 
@@ -163,14 +182,16 @@ def execute_tool(name: str, args: Dict[str, Any]) -> str:
             return json.dumps({
                 "status": "escalated",
                 "reason": reason,
-                "support_phone": settings.HUMAN_SUPPORT_PHONE,
-                "support_hours": "Segunda a Sexta das 09h às 18h",
-                "instructions": "Informe ao cliente que ele pode chamar nossa equipe pelo número indicado para suporte humanizado."
+                "whatsapp_support": "(67) 3321-4500",
+                "phone_support": "(67) 3341-4444",
+                "working_hours": "Segunda a Sexta das 09:00 às 18:00 | Sábado das 09:00 às 13:00",
+                "address": "Rua 14 de Maio, 3200 — Centro, Campo Grande - MS",
+                "instructions": "Informe com simpatia os contatos acima para o atendimento humanizado com nossa equipe."
             }, ensure_ascii=False)
 
         else:
             return json.dumps({"status": "error", "message": f"Ferramenta desconhecida: {name}"})
 
     except Exception as e:
-        logger.error(f"Error executing tool {name}: {e}")
+        logger.error(f"Error executing tool {name}: {e}", exc_info=True)
         return json.dumps({"status": "error", "message": str(e)})

@@ -1,0 +1,119 @@
+{
+  "sobre_a_empresa": {
+    "razao_social": "Empório da Música Instrumentos Musicais Ltda.",
+    "nome_fantasia": "Empório da Música",
+    "cnpj": "12.345.678/0001-90",
+    "fundacao": 2008,
+    "cidade": "Campo Grande",
+    "estado": "MS",
+    "endereco": "Rua 14 de Maio, 3200 — Centro, Campo Grande - MS, 79202-333",
+    "telefone_fixo": "(67) 3341-4444",
+    "whatsapp_atendimento": "(67) 3321-4500",
+    "email": "contato@empóriodamusica.com.br",
+    "missao": "Democratizar o acesso a instrumentos musicais de qualidade na região Centro-Oeste, oferecendo atendimento especializado e preços competitivos.",
+    "escopo_produtos": "A loja comercializa EXCLUSIVAMENTE instrumentos musicais (guitarras, baixos, violões, baterias, teclados, sopros, cordas orquestrais e ukuleles). NÃO comercializa acessórios como cordas, palhetas, cabos, cases, pedais ou amplificadores."
+  },
+  "horario_funcionamento": {
+    "segunda_a_sexta": "09:00 às 18:00",
+    "sabado": "09:00 às 13:00",
+    "domingos_e_feriados": "Fechado",
+    "observacao_whatsapp": "O atendimento via WhatsApp segue o mesmo horário da loja. Fora do expediente, o assistente virtual deve informar o horário de retorno da equipe."
+  },
+  "formas_pagamento": {
+    "pix": {
+      "condicao": "Pagamento à vista",
+      "desconto": "5% de desconto sobre o preço de tabela",
+      "regra_cumulativa": "O desconto de PIX (5%) NÃO se aplica sobre preços já promocionais."
+    },
+    "cartao_debito": {
+      "condicao": "Pagamento à vista",
+      "bandeiras": "Todas as bandeiras aceitas"
+    },
+    "cartao_credito": {
+      "condicao": "Até 12x sem juros",
+      "regras_parcelamento": [
+        "Até 3x sem juros: sem valor mínimo de parcela (exceto abaixo de R$ 50,00).",
+        "De 4x a 6x sem juros: parcela mínima de R$ 80,00.",
+        "De 7x a 12x sem juros: parcela mínima de R$ 100,00."
+      ]
+    },
+    "boleto_bancario": {
+      "condicao": "Pagamento à vista",
+      "compensacao": "Até 3 dias úteis"
+    },
+    "pagamento_misto": {
+      "regra": "Combinação de formas de pagamento (ex.: PIX + cartão) é permitida exclusivamente para compras acima de R$ 2.000,00."
+    }
+  },
+  "trocas_e_devolucoes": {
+    "direito_de_arrependimento": {
+      "aplicabilidade": "Exclusivo para compras online",
+      "prazo": "Até 7 (sete) dias corridos após o recebimento do produto, sem necessidade de justificativa.",
+      "condicoes": "Produto na embalagem original, sem sinais de uso, com todos os acessórios e manuais.",
+      "reembolso": "Realizado na mesma forma de pagamento original em até 10 dias úteis.",
+      "frete": "Frete de devolução é por conta da loja em caso de arrependimento."
+    },
+    "troca_por_defeito": {
+      "prazo_na_loja": "Até 30 (trinta) dias corridos após a compra direto com a loja.",
+      "apos_30_dias": "O cliente deve acionar a garantia diretamente com o fabricante. A loja pode intermediar o processo mediante solicitação.",
+      "exclusoes": "Danos causados por mau uso, quedas, exposição a umidade excessiva ou modificações não autorizadas não são cobertos."
+    },
+    "troca_por_preferencia": {
+      "prazo": "Até 7 dias corridos (cor, modelo, tamanho), mediante disponibilidade em estoque e embalagem original intacta. Diferenças de valor serão cobradas ou reembolsadas."
+    },
+    "itens_nao_elegiveis": [
+      "Instrumentos com personalização ou ajustes sob encomenda (setup, regulagem especial).",
+      "Produtos adquiridos em promoções de liquidação com aviso explícito de 'venda final'.",
+      "Boquilhas de instrumentos de sopro, por questões sanitárias e de higiene."
+    ]
+  },
+  "frete_e_entregas": {
+    "regiao_metropolitana_campo_grande": {
+      "frete_gratis": "Para pedidos acima de R$ 500,00.",
+      "taxa_fixa": "R$ 35,00 para pedidos abaixo de R$ 500,00.",
+      "prazo": "1 a 3 dias úteis.",
+      "metodo": "Entrega realizada por motoboy próprio. O cliente é contactado por telefone antes da entrega."
+    },
+    "outras_cidades": {
+      "transportadoras": [
+        { "modalidade": "PAC (Correios)", "prazo": "5 a 12 dias úteis", "seguro": "Incluído" },
+        { "modalidade": "SEDEX (Correios)", "prazo": "2 a 5 dias úteis", "seguro": "Incluído" },
+        { "modalidade": "Jadlog (.package)", "prazo": "3 a 8 dias úteis", "seguro": "Incluído" }
+      ],
+      "calculo": "Calculado automaticamente com base no CEP de destino, peso e dimensões do produto.",
+      "instrumentos_grande_porte": "Baterias acústicas, pianos digitais e contrabaixos acústicos podem exigir frete especial com cotação individual.",
+      "avaria": "Todos os envios possuem seguro. Em caso de avaria externa visível, o cliente deve recusar o recebimento e notificar a loja imediatamente."
+    },
+    "codigo_rastreamento": {
+      "formato": "BR seguido de 9 caracteres alfanuméricos e BR (exemplo: BR4K7M2X9P1BR).",
+      "envio": "Enviado automaticamente por e-mail e WhatsApp assim que o pedido é despachado."
+    }
+  },
+  "promocoes_e_descontos": {
+    "regras_gerais": [
+      "Promoções não são cumulativas.",
+      "O desconto de PIX (5%) não se aplica sobre produtos em promoção.",
+      "Promoções estão sujeitas à disponibilidade de estoque e não geram reserva de preço (rain check).",
+      "Preços promocionais devem ser apresentados junto ao preço original e o percentual de desconto."
+    ],
+    "promocao_expirada": "Caso o cliente pergunte sobre uma promoção vencida/inativa, o assistente DEVE informar com total transparência que a promoção já encerrou e apresentar o preço de tabela atual. Nunca prometer desconto não vigente."
+  },
+  "garantia": {
+    "garantia_legal": "90 (noventa) dias contra defeitos de fabricação (Código de Defesa do Consumidor), contados do recebimento.",
+    "garantia_fabricante": "Geralmente varia de 6 meses a 2 anos, conforme certificado que acompanha o produto.",
+    "nao_coberto": [
+      "Desgaste natural de peças (trastes, cordas, feltros, palhetas de sopro).",
+      "Danos por mau uso, quedas, variações climáticas severas.",
+      "Modificações ou reparos por técnicos não autorizados.",
+      "Danos puramente estéticos que não comprometem o funcionamento."
+    ]
+  },
+  "lgpd_e_privacidade": {
+    "resumo": "Dados pessoais (nome, telefone, e-mail, endereço) são utilizados exclusivamente para processamento de pedidos, entrega e atualizações. Nunca são vendidos a terceiros para marketing. O cliente pode solicitar exclusão a qualquer momento."
+  },
+  "diretrizes_atendimento_whatsapp": {
+    "tom_de_voz": "Amigável, acolhedor e profissional, como um amigo que entende de música. Evitar linguagem excessivamente formal ou fria/robotizada.",
+    "restricao_escopo": "Exclusivo para instrumentos musicais. Pedidos de cordas, cabos, palhetas, pedais ou amplificadores devem ser educadamente recusados informando que a loja foca apenas em instrumentos.",
+    "transbordo_humano": "Em caso de reclamações, negociações acima de R$ 2.000 ou solicitação expressa do cliente, fornecer o canal de atendimento humano: WhatsApp (67) 3321-4500 ou telefone (67) 3341-4444 (Seg-Sex 09h às 18h)."
+  }
+}
