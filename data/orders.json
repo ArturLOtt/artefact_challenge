@@ -1,0 +1,43 @@
+[
+  {
+    "order_id": "PED-1001",
+    "customer_name": "Carlos Eduardo Silva",
+    "customer_phone": "5511999990001",
+    "status": "Entregue",
+    "items": [
+      { "product": "Violão Clássico Yamaha C40MII Acústico", "quantity": 1, "price": 949.00 }
+    ],
+    "tracking_code": "BR123456789SP",
+    "carrier": "Correios (Sedex)",
+    "delivered_at": "2026-10-28 14:22",
+    "notes": "Entregue na portaria do condomínio."
+  },
+  {
+    "order_id": "PED-1002",
+    "customer_name": "Mariana Souza Costa",
+    "customer_phone": "5511988880002",
+    "status": "Em trânsito",
+    "items": [
+      { "product": "Guitarra Elétrica Fender Squier Sonic Stratocaster Sunburst", "quantity": 1, "price": 1890.00 },
+      { "product": "Cabo Instrumento P10 Santo Angelo Ninja 3 Metros", "quantity": 1, "price": 65.00 }
+    ],
+    "tracking_code": "TRK987654321BR",
+    "carrier": "Jadlog Express",
+    "estimated_delivery": "2026-11-05",
+    "notes": "Saiu do centro de distribuição de Cajamar com destino à unidade local."
+  },
+  {
+    "order_id": "PED-1003",
+    "customer_name": "Roberto Dias Lima",
+    "customer_phone": "5511977770003",
+    "status": "Em separação no estoque",
+    "items": [
+      { "product": "Encordoamento Guitarra D'Addario EXL110", "quantity": 2, "price": 116.00 },
+      { "product": "Pacote com 12 Palhetas Fender Premium Celluloid Médias", "quantity": 1, "price": 45.00 }
+    ],
+    "tracking_code": null,
+    "carrier": "Correios (PAC)",
+    "estimated_delivery": "2026-11-08",
+    "notes": "Pagamento confirmado via PIX. Passando pelo setor de embalagem e expedição."
+  }
+]

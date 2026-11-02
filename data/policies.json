@@ -1,0 +1,44 @@
+{
+  "company_overview": {
+    "name": "Empório da Música",
+    "description": "Loja especializada em instrumentos musicais, equipamentos de áudio profissional, acessórios e serviços de luthieria.",
+    "slogan": "Sua paixão pela música encontra o tom perfeito aqui."
+  },
+  "physical_store": {
+    "address": "Rua da Harmonia, 123 - Bairro Vila Madalena, São Paulo - SP, CEP: 05435-000",
+    "business_hours": {
+      "weekdays": "Segunda a Sexta-feira das 09h00 às 18h30",
+      "saturdays": "Sábados das 09h00 às 14h00",
+      "sundays_and_holidays": "Fechado"
+    },
+    "parking": "Convênio com estacionamento localizado no número 150 da mesma rua com 1 hora de cortesia para compras acima de R$ 100,00."
+  },
+  "payment_methods": {
+    "pix": "À vista via PIX com 5% de desconto automático.",
+    "credit_card": "Cartão de crédito em até 10x sem juros (parcela mínima de R$ 50,00) ou até 12x com juros da operadora. Aceitamos Visa, Mastercard, Elo, Hipercard e American Express.",
+    "bank_slip": "Boleto bancário à vista (vencimento em 2 dias úteis, compensação em até 48 horas).",
+    "cash_in_store": "Dinheiro em espécie aceito exclusivamente na loja física com 5% de desconto."
+  },
+  "shipping_and_delivery": {
+    "free_shipping": "Frete Grátis para todo o estado de São Paulo em compras acima de R$ 299,00. Demais regiões do Brasil têm frete fixo promocional ou cálculo conforme CEP.",
+    "carriers": "Envios realizados via Sedex, PAC (Correios) e transportadoras parceiras (Jadlog, Total Express).",
+    "dispatch_time": "Pedidos aprovados até as 13h00 em dias úteis são postados no mesmo dia. Pedidos após esse horário são postados no próximo dia útil.",
+    "in_store_pickup": "Retirada na loja física disponível gratuitamente em até 2 horas após a confirmação do pagamento."
+  },
+  "exchange_and_return_policy": {
+    "right_of_regret": "Conforme o Código de Defesa do Consumidor, para compras online o cliente tem até 7 (sete) dias corridos após o recebimento para solicitar a devolução com reembolso total ou troca, desde que o produto esteja na embalagem original e sem marcas de uso.",
+    "defect_exchange": "Produtos com defeito técnico de fabricação podem ser trocados diretamente com nossa loja em até 30 (trinta) dias após o recebimento. Após esse prazo, o atendimento segue com a assistência técnica autorizada do fabricante durante o período de garantia.",
+    "warranty": "Todos os instrumentos e eletrônicos novos possuem garantia legal de 90 dias acrescida da garantia estendida do fabricante (totalizando geralmente 12 meses na maioria das marcas).",
+    "hygiene_exception": "Palhetas avulsas, protetores auriculares, fones intra-auriculares e gaitas só podem ser trocados se a embalagem estiver estritamente lacrada e inviolada por razões sanitárias."
+  },
+  "luthier_services": {
+    "description": "Dispomos de oficina de lutheria especializada dentro da nossa loja física para regulagem de cordas, troca de trastes, blindagem, elétrica e customização de instrumentos.",
+    "string_change": "Troca de encordoamento e limpeza de escala em até 24 horas (ou na hora mediante agendamento prévio).",
+    "setup_included": "Todos os violões, guitarras e baixos comprados no Empório da Música saem da loja com uma regulagem padrão gratuita feita pelo nosso luthier."
+  },
+  "human_attendant_support": {
+    "when_to_escalate": "Dúvidas sobre orçamentos complexos de lutheria, problemas de cobrança, dúvidas de garantia após 30 dias ou sempre que o cliente solicitar explicitamente falar com um atendente humano.",
+    "whatsapp_channel": "+55 (11) 91234-5678",
+    "human_support_hours": "Segunda a Sexta das 09h00 às 18h00"
+  }
+}

@@ -1,0 +1,122 @@
+[
+  {
+    "id": "PROD-001",
+    "name": "Violão Acústico Folk Takamine GD11MCE Mahogany",
+    "category": "Cordas",
+    "subtype": "Violão",
+    "brand": "Takamine",
+    "price": 2499.00,
+    "discount_price": 2374.05,
+    "stock": 6,
+    "specs": "Tampo em Mogno, cordas de aço, pré-amplificador TP-4T com afinador embutido, acabamento fosco satin natural.",
+    "suitable_for": "Músicos intermediários a profissionais, shows ao vivo e gravações."
+  },
+  {
+    "id": "PROD-002",
+    "name": "Violão Clássico Yamaha C40MII Acústico",
+    "category": "Cordas",
+    "subtype": "Violão",
+    "brand": "Yamaha",
+    "price": 949.00,
+    "discount_price": 901.55,
+    "stock": 14,
+    "specs": "Tampo em Spruce, cordas de nylon confortáveis, escala em Rosewood, acabamento natural fosco.",
+    "suitable_for": "Iniciantes e estudantes que procuram conforto e excelente timbre tradicional."
+  },
+  {
+    "id": "PROD-003",
+    "name": "Guitarra Elétrica Fender Squier Sonic Stratocaster Sunburst",
+    "category": "Cordas",
+    "subtype": "Guitarra",
+    "brand": "Fender / Squier",
+    "price": 1890.00,
+    "discount_price": 1795.50,
+    "stock": 5,
+    "specs": "Corpo em Poplar, braço em Maple formato C confortável, 3 captadores Single-Coil Ceramic, ponte tremolo estilo vintage.",
+    "suitable_for": "Iniciantes e guitarristas que procuram o clássico timbre Stratocaster para Rock, Blues e Pop."
+  },
+  {
+    "id": "PROD-004",
+    "name": "Amplificador de Guitarra Boss Katana 50 MkII 50W",
+    "category": "Amplificadores",
+    "subtype": "Amplificador",
+    "brand": "Boss",
+    "price": 2750.00,
+    "discount_price": 2612.50,
+    "stock": 3,
+    "specs": "50 Watts de potência, falante de 12 polegadas, 5 perfis de amplificadores exclusivos, dezenas de efeitos Boss embutidos, saída USB para gravação direta.",
+    "suitable_for": "Ensaios, apresentações ao vivo e gravações em estúdio caseiro."
+  },
+  {
+    "id": "PROD-005",
+    "name": "Teclado Arranjador Yamaha PSR-E373 61 Teclas",
+    "category": "Teclas",
+    "subtype": "Teclado",
+    "brand": "Yamaha",
+    "price": 1620.00,
+    "discount_price": 1539.00,
+    "stock": 8,
+    "specs": "61 teclas sensitivas ao toque, 622 vozes de alta qualidade (incluindo Super Articulation Lite), 205 estilos de acompanhamento, função de lição integrada.",
+    "suitable_for": "Estudantes, entusiastas e tecladistas para estudo e apresentações em igrejas ou eventos."
+  },
+  {
+    "id": "PROD-006",
+    "name": "Bateria Eletrônica Compacta Roland TD-02K",
+    "category": "Percussão",
+    "subtype": "Bateria",
+    "brand": "Roland",
+    "price": 3890.00,
+    "discount_price": 3695.50,
+    "stock": 2,
+    "specs": "Módulo TD-02 com 16 kits prontos para tocar, pads de borracha de alta sensibilidade e baixo ruído, pedal de bumbo silencioso, entrada para fones de ouvido.",
+    "suitable_for": "Treino em apartamentos sem incomodar vizinhos e estudantes de bateria de todos os níveis."
+  },
+  {
+    "id": "PROD-007",
+    "name": "Encordoamento Guitarra D'Addario EXL110 Nickel Wound 010-046",
+    "category": "Acessórios",
+    "subtype": "Encordoamento",
+    "brand": "D'Addario",
+    "price": 58.00,
+    "discount_price": 55.10,
+    "stock": 45,
+    "specs": "Calibre 0.010 - 0.046 regular light, enrolamento em aço niquelado para timbre brilhante e durabilidade.",
+    "suitable_for": "A maioria das guitarras elétricas padrão para afinação tradicional."
+  },
+  {
+    "id": "PROD-008",
+    "name": "Afinador Cromático Clip-On Boss TU-02",
+    "category": "Acessórios",
+    "subtype": "Afinador",
+    "brand": "Boss",
+    "price": 99.00,
+    "discount_price": 94.05,
+    "stock": 30,
+    "specs": "Display colorido de alto contraste, fixação prática em clip, modos para Guitarra, Baixo, Ukulele e Cromático.",
+    "suitable_for": "Todos os instrumentos de corda."
+  },
+  {
+    "id": "PROD-009",
+    "name": "Cabo Instrumento P10 Santo Angelo Ninja 3 Metros",
+    "category": "Acessórios",
+    "subtype": "Cabo",
+    "brand": "Santo Angelo",
+    "price": 65.00,
+    "discount_price": 61.75,
+    "stock": 22,
+    "specs": "Conectores P10 niquelados blindados, condutor em cobre livre de oxigênio (OFHC), capa emborrachada resistente a pisões.",
+    "suitable_for": "Conexão de guitarras, baixos e teclados a amplificadores e mesas de som."
+  },
+  {
+    "id": "PROD-010",
+    "name": "Pacote com 12 Palhetas Fender Premium Celluloid Médias (Medium)",
+    "category": "Acessórios",
+    "subtype": "Palheta",
+    "brand": "Fender",
+    "price": 45.00,
+    "discount_price": 42.75,
+    "stock": 60,
+    "specs": "12 unidades em celuloide clássica tortoise, espessura média (0.71mm), pegada tradicional e confortável.",
+    "suitable_for": "Violão e guitarra tanto para dedilhado quanto para levadas rítmicas."
+  }
+]
