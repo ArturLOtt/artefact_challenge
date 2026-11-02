@@ -125,4 +125,27 @@ class OrderService:
                 results.append(details)
         return results
 
+    @property
+    def _orders(self) -> List[Dict[str, Any]]:
+        """Returns all registered orders for administration and status checks."""
+        conn = self.db.get_connection()
+        cursor = conn.cursor()
+        cursor.execute("""
+            SELECT 
+                o.order_id, 
+                o.customer_id, 
+                o.order_date, 
+                o.status, 
+                o.total_brl, 
+                o.tracking_code, 
+                c.name as customer_name 
+            FROM orders o 
+            LEFT JOIN customers c ON o.customer_id = c.customer_id
+            ORDER BY o.order_id ASC
+        """)
+        return [dict(r) for r in cursor.fetchall()]
+
+    def get_all(self) -> List[Dict[str, Any]]:
+        return self._orders
+
 order_service = OrderService()

@@ -184,6 +184,10 @@ class CatalogService:
             "expired_promotions": expired_promos
         }
 
+    def get_all(self) -> List[Dict[str, Any]]:
+        """Returns all products in the catalog."""
+        return self.search_products(query=None, in_stock_only=False, limit=500)
+
     def list_categories(self) -> List[Dict[str, Any]]:
         conn = self.db.get_connection()
         cursor = conn.cursor()
