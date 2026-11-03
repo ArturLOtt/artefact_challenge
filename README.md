@@ -44,7 +44,7 @@ python cli_test.py
 
 ## If finding trouble in one of these previous instructions try running
 ```bash
-cd C:\Users\artur\.gemini\antigravity\scratch\emporio_da_musica_agent
+cd emporio_da_musica_agent
 .\venv\Scripts\pip.exe install -r requirements.txt
 .\venv\Scripts\python.exe cli_test.py
 ```
