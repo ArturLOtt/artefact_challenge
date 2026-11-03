@@ -114,7 +114,7 @@ The navigation intended would be first a initial greeting, then after the asnwer
 Some prompts were made to correct erros during simulation conversation and during environment configuration
 
 ## Known limitations
-Time was the most important limitation in this project. To mitigate this the primary goal was having a running MVP so the workes can start using and in case the agent couldn't solve the costumer's problem to open a comunication with the humans workers. Later, with more time available, the primary goal is to improve messages and navigation, as well receiving feedback from the employees on how to improve issues found by them.
+Time was the most important limitation in this project. To mitigate this the primary goal was having a running MVP so the workes can start using and in case the agent couldn't solve the costumer's problem to open a comunication with the humans workers. Later, with more time available, the primary goal is to improve messages and navigation to make it feel and sound natural human interaction and less robotic, as well receiving feedback from the employees on how to improve issues found by them.
 
 Although Anti-Gravity was of vital importance in this project and doing mostly of the hard-working coding, I had to known exactly what I wanted and give flawless prompt instructions for the AI to get it write. It was a limitation for two reasons:
 During my previous experiences with AI it has always been more effective to get the prompt right on first try (for that it requires clear visualization of what the project is about and how to make it) than to try to fix what it was already made;

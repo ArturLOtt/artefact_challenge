@@ -1,0 +1,204 @@
+        Interaction 1:
+
+python cli_test.py
+====================================================================
+🎵 BEM-VINDO AO SIMULADOR DE CHAT DO EMPÓRIO DA MÚSICA 🎵
+====================================================================
+Assistente: Afinado (Consultor Virtual Musical)
+Catálogo carregado: 65 produtos cadastrados
+Pedidos na base: 20 pedidos
+Políticas carregadas: ['sobre_a_empresa', 'horario_funcionamento', 'formas_pagamento', 'trocas_e_devolucoes', 'frete_e_entregas', 'promocoes_e_descontos', 'garantia', 'lgpd_e_privacidade', 'diretrizes_atendimento_whatsapp']
+
+Comandos especiais:
+  /catalog   -> Ver produtos do estoque
+  /orders    -> Ver pedidos cadastrados para teste de rastreio
+  /policies  -> Ver resumo das políticas da loja
+  /clear     -> Limpar o histórico da conversa atual
+  sair       -> Encerrar o simulador
+====================================================================
+
+Sugestões para testar o fluxo de navegação e atendimento:
+  1. "Olá!" -> Menu inicial com os 4 Grandes Tópicos
+  2. "Quais opções de violões disponíveis custando até R$1000?" -> Catálogo + follow-up
+  3. "Onde fica a loja e qual o horário de funcionamento?" -> Localização + SLA
+  4. "Quanto custa o Takamine GD20?" -> Preço + alerta de promoção vencida
+  5. "Me arrependi da minha compra, posso devolver meu pedido?" -> Política de troca
+  6. "Qual o status do meu pedido PED-1?" (ou rastreio "BRCX9876543BR")
+  7. "Vocês vendem encordoamento ou palhetas?" -> Restrição de acessórios
+  8. (A partir da 4ª pergunta): Teste de transbordo proativo para atendente humano!
+--------------------------------------------------------------------
+
+Você (Cliente): qual status do meu pedido?
+
+[Afinado está digitando...]
+
+Afinado (WhatsApp):
+📦 *Status do Pedido PED-1*:
+• Cliente: Pedro Henrique Oliveira (Campo Grande)
+• Data da Compra: 2025-10-15
+• Status Atual: *Entregue ao destinatário*
+• Rastreamento: BRAB1234567BR
+• Previsão de Entrega: 2025-10-25
+• Itens Comprados:
+  • 1x Martin D-28 Dreadnought Natural (R$ 11499.00)
+• Total: R$ 11499.00 (pix)
+
+👉 *Acompanhamento:* Gostaria de saber mais detalhes sobre os prazos de entrega para sua cidade ou sobre as nossas políticas de garantia e troca?
+--------------------------------------------------------------------
+
+Você (Cliente): sim
+
+[Afinado está digitando...]
+
+Afinado (WhatsApp):
+Olá! Seja muito bem-vindo ao *Empório da Música* em Campo Grande/MS! 🎶🎸
+
+Sou o **Afinado**, seu consultor musical virtual. Para agilizar seu atendimento, aqui estão os principais tópicos em que posso te ajudar agora mesmo:
+
+• 🎸 **1. Preço e Disponibilidade de Produtos**
+  *(Consulte instrumentos em estoque, marcas, modelos e valores à vista no PIX com 5% off)*
+
+• 📦 **2. Status e Rastreamento de Pedido**
+  *(Acompanhe o envio do seu pedido pelo código de rastreamento ou número do pedido)*
+
+• ⏰ **3. Horários de Funcionamento e Loja Física**
+  *(Endereço no centro de Campo Grande/MS, expediente e canais de contato)*
+
+• 💳 **4. Políticas de Pagamento, Frete e Devolução**
+  *(Parcelamento em até 12x sem juros, frete grátis e direito de arrependimento em 7 dias)*
+
+👉 Você pode escolher um dos números acima ou simplesmente digitar sua dúvida com suas próprias palavras!
+--------------------------------------------------------------------
+
+
+        Interaction 2:
+
+python cli_test.py
+Você (Cliente): Qual o endereço da loja?
+
+[Afinado está digitando...]
+
+Afinado (WhatsApp):
+📍 *Empório da Música - Localização e Horários*:
+
+• *Endereço:* Rua 14 de Maio, 3200 — Centro, Campo Grande - MS, 79202-333
+• *Telefone:* (67) 3341-4444 | WhatsApp: (67) 3321-4500
+• *Expediente da Loja:*
+  - Segunda a Sexta: 09:00 às 18:00
+  - Sábado: 09:00 às 13:00
+  - Domingos e Feriados: Fechado
+• *Tempo de Resposta:* Nosso assistente atende imediatamente com tempo médio de resposta de até 5 minutos durante o horário de expediente!
+
+👉 *Acompanhamento:* Você está procurando algum instrumento específico para vir testar pessoalmente na loja?
+--------------------------------------------------------------------
+
+Você (Cliente): sim
+
+[Afinado está digitando...]
+
+Afinado (WhatsApp):
+Olá! Seja muito bem-vindo ao *Empório da Música* em Campo Grande/MS! 🎶🎸
+
+Sou o **Afinado**, seu consultor musical virtual. Para agilizar seu atendimento, aqui estão os principais tópicos em que posso te ajudar agora mesmo:
+
+• 🎸 **1. Preço e Disponibilidade de Produtos**
+  *(Consulte instrumentos em estoque, marcas, modelos e valores à vista no PIX com 5% off)*
+
+• 📦 **2. Status e Rastreamento de Pedido**
+  *(Acompanhe o envio do seu pedido pelo código de rastreamento ou número do pedido)*
+
+• ⏰ **3. Horários de Funcionamento e Loja Física**
+  *(Endereço no centro de Campo Grande/MS, expediente e canais de contato)*
+
+• 💳 **4. Políticas de Pagamento, Frete e Devolução**
+  *(Parcelamento em até 12x sem juros, frete grátis e direito de arrependimento em 7 dias)*
+
+👉 Você pode escolher um dos números acima ou simplesmente digitar sua dúvida com suas próprias palavras!
+
+---
+💬 *Posso te ajudar com um especialista humano?*
+Notei que já conversamos sobre vários pontos! Você está conseguindo encontrar todas as respostas que procura ou gostaria que eu te conectasse diretamente com a nossa equipe de atendimento presencial em Campo Grande?
+• WhatsApp: **(67) 3321-4500** | Telefone: **(67) 3341-4444** (Seg-Sex 09h às 18h)
+--------------------------------------------------------------------
+
+        Interaction 3:
+
+ python cli_test.py
+====================================================================
+🎵 BEM-VINDO AO SIMULADOR DE CHAT DO EMPÓRIO DA MÚSICA 🎵
+====================================================================
+Assistente: Afinado (Consultor Virtual Musical)
+Catálogo carregado: 65 produtos cadastrados
+Pedidos na base: 20 pedidos
+Políticas carregadas: ['sobre_a_empresa', 'horario_funcionamento', 'formas_pagamento', 'trocas_e_devolucoes', 'frete_e_entregas', 'promocoes_e_descontos', 'garantia', 'lgpd_e_privacidade', 'diretrizes_atendimento_whatsapp']
+
+Comandos especiais:
+  /catalog   -> Ver produtos do estoque
+  /orders    -> Ver pedidos cadastrados para teste de rastreio
+  /policies  -> Ver resumo das políticas da loja
+  /clear     -> Limpar o histórico da conversa atual
+  sair       -> Encerrar o simulador
+====================================================================
+
+Sugestões para testar o fluxo de navegação e atendimento:
+  1. "Olá!" -> Menu inicial com os 4 Grandes Tópicos
+  2. "Quais opções de violões disponíveis custando até R$1000?" -> Catálogo + follow-up
+  3. "Onde fica a loja e qual o horário de funcionamento?" -> Localização + SLA
+  4. "Quanto custa o Takamine GD20?" -> Preço + alerta de promoção vencida
+  5. "Me arrependi da minha compra, posso devolver meu pedido?" -> Política de troca
+  6. "Qual o status do meu pedido PED-1?" (ou rastreio "BRCX9876543BR")
+  7. "Vocês vendem encordoamento ou palhetas?" -> Restrição de acessórios
+  8. (A partir da 4ª pergunta): Teste de transbordo proativo para atendente humano!
+--------------------------------------------------------------------
+
+Você (Cliente): "Me arrependi da minha compra, posso devolver meu pedido?
+
+[Afinado está digitando...]
+
+Afinado (WhatsApp):
+📦 *Status do Pedido PED-1*:
+• Cliente: Pedro Henrique Oliveira (Campo Grande)
+• Data da Compra: 2025-10-15
+• Status Atual: *Entregue ao destinatário*
+• Rastreamento: BRAB1234567BR
+• Previsão de Entrega: 2025-10-25
+• Itens Comprados:
+  • 1x Martin D-28 Dreadnought Natural (R$ 11499.00)
+• Total: R$ 11499.00 (pix)
+
+👉 *Acompanhamento:* Gostaria de saber mais detalhes sobre os prazos de entrega para sua cidade ou sobre as nossas políticas de garantia e troca?
+--------------------------------------------------------------------
+
+
+        Interaction 4:
+
+
+Você (Cliente): Voces vendem maquina de sorvete?
+
+[Afinado está digitando...]
+
+Afinado (WhatsApp):
+Olá! Seja muito bem-vindo ao *Empório da Música* em Campo Grande/MS! 🎶🎸
+
+Sou o **Afinado**, seu consultor musical virtual. Para agilizar seu atendimento, aqui estão os principais tópicos em que posso te ajudar agora mesmo:
+
+• 🎸 **1. Preço e Disponibilidade de Produtos**
+  *(Consulte instrumentos em estoque, marcas, modelos e valores à vista no PIX com 5% off)*
+
+• 📦 **2. Status e Rastreamento de Pedido**
+  *(Acompanhe o envio do seu pedido pelo código de rastreamento ou número do pedido)*
+
+• ⏰ **3. Horários de Funcionamento e Loja Física**
+  *(Endereço no centro de Campo Grande/MS, expediente e canais de contato)*
+
+• 💳 **4. Políticas de Pagamento, Frete e Devolução**
+  *(Parcelamento em até 12x sem juros, frete grátis e direito de arrependimento em 7 dias)*
+
+👉 Você pode escolher um dos números acima ou simplesmente digitar sua dúvida com suas próprias palavras!
+
+---
+💬 *Posso te ajudar com um especialista humano?*
+Notei que já conversamos sobre vários pontos! Você está conseguindo encontrar todas as respostas que procura ou gostaria que eu te conectasse diretamente com a nossa equipe de atendimento presencial em Campo Grande?
+• WhatsApp: **(67) 3321-4500** | Telefone: **(67) 3341-4444** (Seg-Sex 09h às 18h)
+--------------------------------------------------------------------
+
